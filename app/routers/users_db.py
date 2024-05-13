@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException, status
 from bson import ObjectId
-from db.models.user import User
-from db.client import db_client
-from schemas.user import user_schema, users_schema
+from app.db.models.user import User
+from app.db.client import db_client
+from app.schemas.user import user_schema, users_schema
 
 router = APIRouter(prefix="/userdb", tags=["userdb"],
                    responses={status.HTTP_404_NOT_FOUND: {"description": "Not found"}})
